@@ -25,11 +25,11 @@
 <ul>
 <li><b>colour (str):</b> A column name from the dataframe, default null, the value of this column will not be used to calculate the radviz points, instead it will be used to determine the colour of the point</li>
 <li><b>dynamicScale (bool):</b> Default False, When activated the RadViz will linearly scale the points so the outer most point will contact the surface of the sphere.</li>
-<li><b>grid</b> (bool):</b> Default False, Create lines from the center of the sphere to the data points, allows for visual recognition of what angle a axis is located at</li>
+<li><b>grid (bool)</b>:</b> Default False, Create lines from the center of the sphere to the data points, allows for visual recognition of what angle a axis is located at</li>
 <li><b>sphereOpacity (float):</b> Default 0.1, Changes the opacity of the sphere used from visual recognition, a value over 0.2 is not recommended
 <li><b>gridOpacity (float):</b> Default 0.5, Changes the opacity of the grid lines</li>
 <li><b>plotSize (int):</b> Default 900, The pixel size of the final plot, the set aspect ratio is 1:1 to ensure no warping of the sphere</li>
-<li><b>rotate</b> (bool):</b> Default False, Rotates the plot around the Z axis 720 degrees
+<li><b>rotate (bool):</b> Default False, Rotates the plot around the Z axis 720 degrees
 </ul>
 
 <h2>Output:</h2>
