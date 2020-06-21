@@ -18,7 +18,7 @@ warnings.filterwarnings(action='ignore', category=Warning)
 
 
 class RadViz3D():
-    def __init__(self, df, colour = None, dynamicScale = False, grid = False, sphereOpacity = 0.1, gridOpacity = 0.5, plotSize = 900):
+    def __init__(self, df, colour = None, dynamicScale = False, grid = False, sphereOpacity = 0.1, gridOpacity = 0.5, plotSize = 900, rotate = False):
         #Get the instance of the data frame
         #Copy is required so the first instance is not effected
         data = df.copy()
@@ -203,10 +203,15 @@ class RadViz3D():
             title = "RadViz_3D"
             ax.set_title(title)
 
-
-        #Show the result
         fig.tight_layout()
-        plt.show()
+        
+        if rotate:
+            for angle in range(0, 719, 2):
+                ax.view_init(0, angle)
+                plt.draw()
+                plt.pause(.001)
+        else:
+            plt.show()
 
 
     def pointSphereDistribution_Fibinacci(self, N):
